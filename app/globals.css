@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Icon styles */
+.contact-icon {
+  width: 16px;
+  height: 16px;
+  color: #fb7185;
+  margin-right: 8px;
+}
+
+.contact-label-wrapper {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.skill-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-icon {
+  width: 18px;
+  height: 18px;
+  color: #fb7185;
+}
+
+.skill-name {
+  flex: 1;
+}
+
+.resume-icon {
+  margin-left: 8px;
+  width: 18px;
+  height: 18px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-label-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  
+  .skill-content {
+    flex-wrap: wrap;
+  }
+}
