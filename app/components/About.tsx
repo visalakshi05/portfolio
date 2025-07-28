@@ -94,43 +94,43 @@ const About: React.FC = () => {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-12 text-white">
+    <section className="max-w-7xl mx-auto px-4 py-8 sm:py-12 text-white pb-5 sm:pb-0">
       {/* Header */}
-      <header className="mb-12 text-center">
-        <h1 className="text-5xl font-bold text-violet-300 mb-4">About Me</h1>
-        <p className="max-w-3xl mx-auto text-violet-400 text-lg">
+      <header className="mb-8 sm:mb-12 text-center">
+        <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-violet-300 mb-3 sm:mb-4">About Me</h1>
+        <p className="max-w-3xl mx-auto text-violet-400 text-base sm:text-lg px-2">
           Get to know my journey, education, and expertise
         </p>
       </header>
 
       {/* FLEX: Profile Card + Main Content */}
-      <div className="flex flex-col md:flex-row gap-10 items-start">
+      <div className="flex flex-col lg:flex-row gap-6 lg:gap-10 items-start">
         {/* Profile Card */}
-        <div className="w-full md:max-w-xs flex-shrink-0 mb-8 md:mb-0">
-          <div className="bg-gray-900 bg-opacity-60 rounded-xl p-6 shadow-lg">
-            <div className="w-36 h-36 bg-violet-700 rounded-full flex items-center justify-center text-6xl mx-auto mb-4">
+        <div className="w-full lg:max-w-xs flex-shrink-0 mb-6 lg:mb-0">
+          <div className="bg-gray-900 bg-opacity-60 rounded-xl p-4 sm:p-6 shadow-lg">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 bg-violet-700 rounded-full flex items-center justify-center text-4xl sm:text-5xl lg:text-6xl mx-auto mb-3 sm:mb-4">
               👤
             </div>
-            <h2 className="text-2xl font-semibold text-center text-violet-300">Visalakshi VR</h2>
-            <p className="text-center text-violet-400 mb-6">AI ML Developer</p>
+            <h2 className="text-xl sm:text-2xl font-semibold text-center text-violet-300">Visalakshi VR</h2>
+            <p className="text-center text-violet-400 mb-4 sm:mb-6 text-sm sm:text-base">AI ML Developer</p>
             <div className="flex justify-around">
               <div className="text-center">
-                <div className="text-4xl font-bold text-violet-400">3rd</div>
-                <div className="text-sm text-violet-500 uppercase mt-1">Year</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-violet-400">3rd</div>
+                <div className="text-xs sm:text-sm text-violet-500 uppercase mt-1">Year</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-violet-400">5+</div>
-                <div className="text-sm text-violet-500 uppercase mt-1">Projects</div>
+                <div className="text-2xl sm:text-3xl lg:text-4xl font-bold text-violet-400">5+</div>
+                <div className="text-xs sm:text-sm text-violet-500 uppercase mt-1">Projects</div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="flex-1 flex flex-col space-y-12">
+        <div className="flex-1 flex flex-col space-y-8 sm:space-y-12">
           {/* Story */}
-          <section className="bg-gray-900 bg-opacity-60 rounded-xl p-8 shadow-lg">
-            <h2 className="text-3xl font-semibold text-violet-300 mb-6">My Story</h2>
-            <div className="space-y-6 text-violet-400 leading-relaxed">
+          <section className="bg-gray-900 bg-opacity-60 rounded-xl p-6 sm:p-8 shadow-lg">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-violet-300 mb-4 sm:mb-6">My Story</h2>
+            <div className="space-y-4 sm:space-y-6 text-violet-400 leading-relaxed text-sm sm:text-base">
               <p>
                 I'm a passionate AI/ML developer with a strong foundation in artificial intelligence and data science. My journey began in undergraduate studies, discovering machine learning and its ability to solve complex problems.
               </p>
@@ -145,45 +145,44 @@ const About: React.FC = () => {
         </div>
       </div>
 
-      {/* Education Section outside flex grid, always full width */}
-      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-8 shadow-lg mt-12">
-        <h2 className="text-3xl font-semibold text-violet-300 mb-6">Education</h2>
-        <div className="border-l-4 border-violet-500 pl-6 space-y-8">
+      {/* Education Section */}
+      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-6 sm:p-8 shadow-lg mt-8 sm:mt-12">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-violet-300 mb-4 sm:mb-6">Education</h2>
+        <div className="border-l-4 border-violet-500 pl-4 sm:pl-6 space-y-6 sm:space-y-8">
           {education.map(({ degree, year, institution, description }, i) => (
             <article key={i} className="relative">
-              {/* Dot has been removed */}
-              <div className="flex justify-between flex-wrap md:flex-nowrap mb-1">
-                <h3 className="text-xl font-semibold">{degree}</h3>
-                <time className="italic text-violet-400">{year}</time>
+              <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2 sm:mb-1 gap-1 sm:gap-4">
+                <h3 className="text-lg sm:text-xl font-semibold text-white order-1">{degree}</h3>
+                <time className="italic text-violet-400 text-sm sm:text-base order-2 sm:order-2 flex-shrink-0">{year}</time>
               </div>
-              <p className="font-semibold text-violet-400">{institution}</p>
-              <p className="text-violet-400">{description}</p>
+              <p className="font-semibold text-violet-400 text-sm sm:text-base mb-1">{institution}</p>
+              <p className="text-violet-400 text-sm sm:text-base">{description}</p>
             </article>
           ))}
         </div>
       </section>
 
       {/* Tech Stack */}
-      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-8 shadow-lg mt-5 space-y-10">
-        <h2 className="text-3xl font-semibold text-violet-300 mb-6">Tech Stack</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-6 sm:p-8 shadow-lg mt-6 sm:mt-8 space-y-8 sm:space-y-10">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-violet-300 mb-4 sm:mb-6">Tech Stack</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
           {skillCategories
             .filter(cat => cat.title !== "Specializations")
             .map(({ title, skills }, i) => (
               <div key={i}>
-                <h3 className="text-2xl font-semibold text-violet-400 mb-5">{title}</h3>
+                <h3 className="text-xl sm:text-2xl font-semibold text-violet-400 mb-4 sm:mb-5">{title}</h3>
                 <ul>
                   {skills.map(({ name, level, icon: Icon }, j) => (
                     <li
                       key={j}
-                      className="mb-4 flex flex-wrap items-center justify-between gap-4"
+                      className="mb-3 sm:mb-4 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 sm:gap-4"
                     >
-                      <div className="flex flex-wrap items-center gap-3">
-                        {Icon && <Icon className="text-violet-400 w-8 h-8" />}
-                        <span className="text-violet-300 font-medium">{name}</span>
+                      <div className="flex items-center gap-2 sm:gap-3">
+                        {Icon && <Icon className="text-violet-400 w-6 h-6 sm:w-8 sm:h-8 flex-shrink-0" />}
+                        <span className="text-violet-300 font-medium text-sm sm:text-base">{name}</span>
                       </div>
                       {level && (
-                        <span className="rounded-full bg-violet-700 px-3 py-1 text-xs font-semibold tracking-wide text-violet-300">
+                        <span className="hidden sm:inline-block rounded-full bg-violet-700 px-3 py-1 text-xs font-semibold tracking-wide text-violet-300">
                           {level}
                         </span>
                       )}
@@ -194,14 +193,15 @@ const About: React.FC = () => {
             ))}
         </div>
       </section>
+
       {/* Specializations */}
-      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-8 shadow-lg mt-5">
-        <h2 className="text-3xl font-semibold text-violet-300 mb-6">Specializations</h2>
-        <div className="flex flex-wrap gap-3">
+      <section className="bg-gray-900 bg-opacity-60 rounded-xl p-6 sm:p-8 shadow-lg mt-6 sm:mt-8">
+        <h2 className="text-2xl sm:text-3xl font-semibold text-violet-300 mb-4 sm:mb-6">Specializations</h2>
+        <div className="flex flex-wrap gap-2 sm:gap-3">
           {skillCategories.find(cat => cat.title === "Specializations")?.skills.map(({ name }, i) => (
             <span
               key={i}
-              className="select-none rounded-full bg-gradient-to-r from-violet-800 to-purple-800 px-5 py-2 font-semibold text-base text-violet-200 shadow-sm transition-transform hover:scale-105"
+              className="select-none rounded-full bg-gradient-to-r from-violet-800 to-purple-800 px-3 sm:px-5 py-1.5 sm:py-2 font-semibold text-sm sm:text-base text-violet-200 shadow-sm transition-transform hover:scale-105"
             >
               {name}
             </span>
